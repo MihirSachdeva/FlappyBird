@@ -1,0 +1,19 @@
+:root {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body, h1, canvas, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+    color: wheat;
+}
+
+body { 
+    background-color: black;
+}
+      
