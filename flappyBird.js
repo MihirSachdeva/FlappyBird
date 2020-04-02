@@ -39,11 +39,12 @@ scor.src = "sounds/score.mp3";
 // on keydown
 
 document.addEventListener("keydown", moveUp);
-document.addEventListener("click", moveUp);
+document.querySelector(".red-button").addEventListener("click", moveUp);
+document.querySelector("#canvas").addEventListener("click", moveUp);
 
 
 function moveUp() {
-    bY -= 25;
+    bY -= 30;
     fly.play();
 }
 
