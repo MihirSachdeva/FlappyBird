@@ -28,7 +28,7 @@ var gravity = 1.5;
 
 var score = 0;
 
-// audio 
+// audio
 
 var fly = new Audio();
 var scor = new Audio();
@@ -39,13 +39,15 @@ scor.src = "sounds/score.mp3";
 // on keydown
 
 document.addEventListener("keydown", moveUp);
+document.addEventListener("click", moveUp);
+
 
 function moveUp() {
     bY -= 25;
     fly.play();
 }
 
-// pipe coordinates 
+// pipe coordinates
 
 var pipe = [];
 
@@ -77,10 +79,10 @@ function draw() {
             });
         }
 
-        // detect collision 
+        // detect collision
 
-        if(bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width 
-        && (bY <= pipe[i].y + pipeNorth.height || bY + bird.height >= pipe[i].y + constant) 
+        if(bX + bird.width >= pipe[i].x && bX <= pipe[i].x + pipeNorth.width
+        && (bY <= pipe[i].y + pipeNorth.height || bY + bird.height >= pipe[i].y + constant)
         || bY + bird.height >= cvs.height - fg.height) {
             location.reload(); //reload the page
         }
@@ -90,7 +92,7 @@ function draw() {
             scor.play();
         }
     }
-    
+
 
     imageDrawer(fg, 0, cvs.height-fg.height);
 
